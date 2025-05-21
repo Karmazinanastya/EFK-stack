@@ -7,6 +7,8 @@ services:
     restart: always
     depends_on:
       - logstash
+    ports:
+      - "9091:9091" 
 
   kibana:
     image: docker.elastic.co/kibana/kibana:8.10.2
@@ -47,4 +49,3 @@ services:
       - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     depends_on:
       - elasticsearch
-

@@ -11,3 +11,5 @@ WORKDIR /app
 
 # Запуск бота
 CMD ["python", "bot.py"]
+
+RUN pip install python-telegram-bot prometheus_client
